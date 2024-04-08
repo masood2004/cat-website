@@ -1,0 +1,124 @@
+:root {
+  --background-color: #fff;
+  --text-color: #131217;
+  --button-bg-color: #ffae03;
+  --background-color-dark: #131217;
+  --text-color-dark: #fff;
+  --button-bg-color-dark: #d49101;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.dark-mode {
+  --background-color: var(--background-color-dark);
+  --text-color: var(--text-color-dark);
+  --button-bg-color: var(--button-bg-color-dark);
+}
+
+img.dark {
+  display: none;
+}
+
+.dark-mode img.dark {
+  display: block;
+}
+
+.dark-mode img.light {
+  display: none;
+}
+
+.dark-mode-toggle {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+section {
+  position: relative;
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+}
+
+section > div {
+  max-width: 1065px;
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.column-center {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-size: 8em;
+  font-weight: 1000;
+  line-height: 0.8;
+  margin: 0;
+}
+
+h1 + span {
+  font-size: 2em;
+}
+
+h2 {
+  font-size: 3em;
+  font-weight: 1000;
+  margin: 0;
+}
+
+h2 + span {
+  margin: 1em 0;
+  font-size: 2em;
+  display: block;
+}
+
+button {
+  cursor: pointer;
+  color: var(--text-color);
+  background-color: var(--button-bg-color);
+  border: 2px solid var(--text-color);
+  padding: 0.25em 1.5em;
+  font-weight: bold;
+  font-size: 1em;
+  display: flex;
+  align-items: center;
+  transition: transform 200ms;
+}
+
+button.icon {
+  background-color: transparent;
+  border: none;
+}
+
+button > img {
+  margin-left: 0.5em;
+  transition: transform 200ms;
+}
+
+button.big {
+  font-size: 1.75em;
+  border-width: 4px;
+}
+
+button.big > img {
+  width: 34px;
+  height: 41px;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+button:hover img {
+  transform: rotateZ(360deg);
+}
